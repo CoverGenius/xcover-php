@@ -1,0 +1,22 @@
+{
+  "quotes": [
+    {
+      "id": "{{quote_id}}",
+      "insured": [
+        {
+          "first_name": "John",
+          "last_name": "Bon Jovi",
+          "email": "john.bon.jovi@gmail.com",
+          "age": 30
+        }
+      ]
+    }
+  ],
+  "policyholder": {
+    "first_name": "John",
+    "last_name": "Bon Jovi",
+    "email": "john.bon.jovi@gmail.com",
+    "age": 30,
+    "country": "GB"
+  }
+}

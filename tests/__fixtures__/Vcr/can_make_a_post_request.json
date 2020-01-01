@@ -1,0 +1,39 @@
+[
+  {
+    "request": {
+      "method": "POST",
+      "url": "https:\/\/eu-central-1.staging.api.xcover.com\/xcover\/partners\/LLODT\/",
+      "headers": {
+        "Host": "eu-central-1.staging.api.xcover.com",
+        "Expect": null,
+        "Accept-Encoding": null,
+        "User-Agent": "GuzzleHttp\/6.5.0 curl\/7.64.1 PHP\/7.3.9",
+        "Content-Type": "application\/json",
+        "Date": "Sun, 22 Dec 2019 11:18:14 GMT",
+        "Accept": null
+      },
+      "body": "[]"
+    },
+    "response": {
+      "status": {
+        "http_version": "1.1",
+        "code": "201",
+        "message": "Not Found"
+      },
+      "headers": {
+        "Date": "Sun, 22 Dec 2019 11:18:15 GMT",
+        "Content-Type": "application\/json",
+        "Content-Length": "63",
+        "Connection": "keep-alive",
+        "Server": "nginx",
+        "Vary": "Accept-Encoding",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Ratelimit-Limit": "-1",
+        "X-Ratelimit-Remaining": "-1",
+        "X-Ratelimit-Reset": "1568836675"
+      },
+      "body": "{}"
+    }
+  }
+]

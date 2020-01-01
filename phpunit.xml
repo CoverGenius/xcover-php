@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         bootstrap="tests/bootstrap.php"
+         timeoutForSmallTests="1"
+         timeoutForMediumTests="1"
+         timeoutForLargeTests="2"
+>
+    <testsuites>
+        <testsuite name="XCover SDK Test Suite">
+            <directory suffix="Test.php">./tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory>./src</directory>
+        </whitelist>
+    </filter>
+    <listeners>
+        <listener class="VCR\PHPUnit\TestListener\VCRTestListener"
+                  file="vendor/php-vcr/phpunit-testlistener-vcr/src/VCRTestListener.php"/>
+    </listeners>
+</phpunit>

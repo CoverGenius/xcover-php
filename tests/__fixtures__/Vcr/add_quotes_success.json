@@ -1,0 +1,76 @@
+[
+  {
+    "request": {
+      "method": "POST",
+      "url": "https:\/\/eu-central-1.staging.api.xcover.com\/xcover\/partners\/LLODT\/quotes\/",
+      "headers": {
+        "Host": "eu-central-1.staging.api.xcover.com",
+        "Expect": null,
+        "Accept-Encoding": null,
+        "User-Agent": "GuzzleHttp\/6.5.0 curl\/7.64.1 PHP\/7.3.9",
+        "Content-Type": "application\/json",
+        "Date": "Fri, 27 Dec 2019 11:19:27 GMT",
+        "Accept": null
+      },
+      "body": "{\"request\":[{\"policy_type\":\"event_ticket_protection\",\"policy_type_version\":1,\"policy_start_date\":\"2019-12-28T11:19:27.974+00:00\",\"event_datetime\":\"2019-12-28T11:19:27.974+00:00\",\"event_name\":\"Ariana Grande\",\"event_location\":\"The O2\",\"number_of_tickets\":2,\"total_ticket_price\":100,\"resale_ticket\":false,\"event_country\":\"GB\"}],\"currency\":\"GBP\",\"customer_country\":\"GB\",\"customer_region\":\"London\",\"customer_language\":\"en\"}"
+    },
+    "response": {
+      "status": {
+        "http_version": "1.1",
+        "code": "201",
+        "message": "Created"
+      },
+      "headers": {
+        "Date": "Fri, 27 Dec 2019 11:19:29 GMT",
+        "Content-Type": "application\/json",
+        "Content-Length": "1993",
+        "Connection": "keep-alive",
+        "Allow": "GET, POST, DELETE, HEAD, OPTIONS",
+        "Server": "nginx",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Ratelimit-Limit": "-1",
+        "X-Ratelimit-Remaining": "-1",
+        "X-Ratelimit-Reset": "1568836675"
+      },
+      "body": "{\"id\":\"6G3R7-J7VQQ-INS\",\"status\":\"RECEIVED\",\"currency\":\"GBP\",\"total_price\":5.0,\"total_price_formatted\":\"\u00a3\u00a05.00\",\"partner_transaction_id\":null,\"created_at\":\"2019-12-27T11:19:29.234960Z\",\"updated_at\":\"2019-12-27T11:19:29.234973Z\",\"pds_url\":\"https:\/\/staging.xcover.com\/en\/pds\/6G3R7-J7VQQ-INS\",\"quotes\":{\"0\":{\"id\":\"a936f9f6-3835-4758-abb0-510053241767\",\"policy_start_date\":\"2019-12-28T11:19:27.974000+00:00\",\"policy_end_date\":\"2019-12-28T11:19:27.974000+00:00\",\"status\":\"RECEIVED\",\"price\":5.0,\"price_formatted\":\"\u00a3\u00a05.00\",\"policy\":{\"policy_type\":\"event_ticket_protection\",\"policy_name\":\"Ticket Protection\",\"policy_code\":\"ETIX01\",\"policy_version\":\"4ac88ab6-5714-4a67-ad6c-9466e2b05a48\",\"category\":null,\"content\":{\"title\":\"Ticket Protection\",\"header\":\"Ticket Protection\",\"description\":\"Covers the purchase cost of tickets (up to a maximum of \u00a3500) if you are unable to attend a booked event as result of an unexpected circumstance.\",\"optout_msg\":\"<p><\/p>\",\"disclaimer\":\"This plan is arranged by XCover.com\"},\"underwriter\":{\"disclaimer\":\"this is a disclaimer\",\"name\":\"Asservo\"}},\"insured\":null,\"tax\":{\"total_tax\":0.0,\"total_amount_without_tax\":5.0,\"total_tax_formatted\":\"\u00a3\u00a00.00\",\"total_amount_without_tax_formatted\":\"\u00a3\u00a05.00\",\"taxes\":[]},\"duration\":\"00:00:00\",\"benefits\":[],\"commission\":{\"total_commission\":0.0,\"total_commission_formatted\":\"\u00a3\u00a00.00\"},\"created_at\":\"2019-12-27T11:19:29.229934Z\",\"confirmed_at\":null,\"updated_at\":\"2019-12-27T11:19:29.229948Z\",\"cancelled_at\":null,\"is_renewable\":false,\"cover_amount\":null,\"cover_amount_formatted\":null,\"pending_renewal\":null,\"pds_url\":\"https:\/\/staging.xcover.com\/en\/pds\/6G3R7-J7VQQ-INS?policy_type=event_ticket_protection_v1\",\"discount_price\":5.0,\"discount_price_formatted\":\"\u00a3\u00a05.00\",\"discount_amount\":0.0,\"discount_amount_formatted\":\"\u00a3\u00a00.00\"}},\"bundle_code\":null,\"bundle_price\":5.0,\"bundle_content\":{},\"bundle_price_formatted\":\"\u00a3\u00a05.00\",\"bundle_discount_percent\":0.0,\"bundle_discount_amount\":0.0,\"bundle_discount_amount_formatted\":\"\u00a3\u00a00.00\"}"
+    }
+  },
+  {
+    "request": {
+      "method": "POST",
+      "url": "https:\/\/eu-central-1.staging.api.xcover.com\/xcover\/partners\/LLODT\/quotes\/6G3R7-J7VQQ-INS\/add\/",
+      "headers": {
+        "Host": "eu-central-1.staging.api.xcover.com",
+        "Expect": null,
+        "Accept-Encoding": null,
+        "User-Agent": "GuzzleHttp\/6.5.0 curl\/7.64.1 PHP\/7.3.9",
+        "Content-Type": "application\/json",
+        "Date": "Fri, 27 Dec 2019 11:19:29 GMT",
+        "Accept": null
+      },
+      "body": "{\"request\":[{\"policy_type\":\"event_ticket_protection\",\"policy_type_version\":1,\"policy_start_date\":\"2019-12-28T11:19:29.425+00:00\",\"event_datetime\":\"2019-12-28T11:19:29.425+00:00\",\"event_name\":\"Ariana Grande\",\"event_location\":\"The O2\",\"number_of_tickets\":2,\"total_ticket_price\":100,\"resale_ticket\":false,\"event_country\":\"GB\"}]}"
+    },
+    "response": {
+      "status": {
+        "http_version": "1.1",
+        "code": "201",
+        "message": "Created"
+      },
+      "headers": {
+        "Date": "Fri, 27 Dec 2019 11:19:30 GMT",
+        "Content-Type": "application\/json",
+        "Content-Length": "3488",
+        "Connection": "keep-alive",
+        "Allow": "GET, POST, DELETE, HEAD, OPTIONS",
+        "Server": "nginx",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Ratelimit-Limit": "-1",
+        "X-Ratelimit-Remaining": "-1",
+        "X-Ratelimit-Reset": "1568836675"
+      },
+      "body": "{\"id\":\"6G3R7-J7VQQ-INS\",\"status\":\"RECEIVED\",\"currency\":\"GBP\",\"total_price\":10.0,\"total_price_formatted\":\"\u00a3\u00a010.00\",\"partner_transaction_id\":null,\"created_at\":\"2019-12-27T11:19:29.234960Z\",\"updated_at\":\"2019-12-27T11:19:29.234973Z\",\"pds_url\":\"https:\/\/staging.xcover.com\/en\/pds\/6G3R7-J7VQQ-INS\",\"quotes\":{\"0\":{\"id\":\"47b50c10-2c5b-4ddb-a918-81cfd2f1056f\",\"policy_start_date\":\"2019-12-28T11:19:29.425000+00:00\",\"policy_end_date\":\"2019-12-28T11:19:29.425000+00:00\",\"status\":\"RECEIVED\",\"price\":5.0,\"price_formatted\":\"\u00a3\u00a05.00\",\"policy\":{\"policy_type\":\"event_ticket_protection\",\"policy_name\":\"Ticket Protection\",\"policy_code\":\"ETIX01\",\"policy_version\":\"4ac88ab6-5714-4a67-ad6c-9466e2b05a48\",\"category\":null,\"content\":{\"title\":\"Ticket Protection\",\"header\":\"Ticket Protection\",\"description\":\"Covers the purchase cost of tickets (up to a maximum of \u00a3500) if you are unable to attend a booked event as result of an unexpected circumstance.\",\"optout_msg\":\"<p><\/p>\",\"disclaimer\":\"This plan is arranged by XCover.com\"},\"underwriter\":{\"disclaimer\":\"this is a disclaimer\",\"name\":\"Asservo\"}},\"insured\":null,\"tax\":{\"total_tax\":0.0,\"total_amount_without_tax\":5.0,\"total_tax_formatted\":\"\u00a3\u00a00.00\",\"total_amount_without_tax_formatted\":\"\u00a3\u00a05.00\",\"taxes\":[]},\"duration\":\"00:00:00\",\"benefits\":[],\"commission\":{\"total_commission\":0.0,\"total_commission_formatted\":\"\u00a3\u00a00.00\"},\"created_at\":\"2019-12-27T11:19:30.564498Z\",\"confirmed_at\":null,\"updated_at\":\"2019-12-27T11:19:30.564512Z\",\"cancelled_at\":null,\"is_renewable\":false,\"cover_amount\":null,\"cover_amount_formatted\":null,\"pending_renewal\":null,\"pds_url\":\"https:\/\/staging.xcover.com\/en\/pds\/6G3R7-J7VQQ-INS?policy_type=event_ticket_protection_v1\",\"discount_price\":5.0,\"discount_price_formatted\":\"\u00a3\u00a05.00\",\"discount_amount\":0.0,\"discount_amount_formatted\":\"\u00a3\u00a00.00\"},\"1\":{\"id\":\"a936f9f6-3835-4758-abb0-510053241767\",\"policy_start_date\":\"2019-12-28T11:19:27.974000+00:00\",\"policy_end_date\":\"2019-12-28T11:19:27.974000+00:00\",\"status\":\"RECEIVED\",\"price\":5.0,\"price_formatted\":\"\u00a3\u00a05.00\",\"policy\":{\"policy_type\":\"event_ticket_protection\",\"policy_name\":\"Ticket Protection\",\"policy_code\":\"ETIX01\",\"policy_version\":\"4ac88ab6-5714-4a67-ad6c-9466e2b05a48\",\"category\":null,\"content\":{\"title\":\"Ticket Protection\",\"header\":\"Ticket Protection\",\"description\":\"Covers the purchase cost of tickets (up to a maximum of \u00a3500) if you are unable to attend a booked event as result of an unexpected circumstance.\",\"optout_msg\":\"<p><\/p>\",\"disclaimer\":\"This plan is arranged by XCover.com\"},\"underwriter\":{\"disclaimer\":\"this is a disclaimer\",\"name\":\"Asservo\"}},\"insured\":null,\"tax\":{\"total_tax\":0.0,\"total_amount_without_tax\":5.0,\"total_tax_formatted\":\"\u00a3\u00a00.00\",\"total_amount_without_tax_formatted\":\"\u00a3\u00a05.00\",\"taxes\":[]},\"duration\":\"00:00:00\",\"benefits\":[],\"commission\":{\"total_commission\":0.0,\"total_commission_formatted\":\"\u00a3\u00a00.00\"},\"created_at\":\"2019-12-27T11:19:29.229934Z\",\"confirmed_at\":null,\"updated_at\":\"2019-12-27T11:19:30.537720Z\",\"cancelled_at\":null,\"is_renewable\":false,\"cover_amount\":null,\"cover_amount_formatted\":null,\"pending_renewal\":null,\"pds_url\":\"https:\/\/staging.xcover.com\/en\/pds\/6G3R7-J7VQQ-INS?policy_type=event_ticket_protection_v1\",\"discount_price\":5.0,\"discount_price_formatted\":\"\u00a3\u00a05.00\",\"discount_amount\":0.0,\"discount_amount_formatted\":\"\u00a3\u00a00.00\"}},\"bundle_code\":null,\"bundle_price\":10.0,\"bundle_content\":{},\"bundle_price_formatted\":\"\u00a3\u00a010.00\",\"bundle_discount_percent\":0.0,\"bundle_discount_amount\":0.0,\"bundle_discount_amount_formatted\":\"\u00a3\u00a00.00\"}"
+    }
+  }
+]

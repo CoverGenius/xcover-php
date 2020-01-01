@@ -1,0 +1,9 @@
+# composer
+
+composer.phar
+composer.lock
+/vendor/
+
+/.idea
+
+.env

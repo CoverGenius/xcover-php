@@ -1,0 +1,114 @@
+[
+  {
+    "request": {
+      "method": "POST",
+      "url": "https:\/\/eu-central-1.staging.api.xcover.com\/xcover\/partners\/LLODT\/quotes\/",
+      "headers": {
+        "Host": "eu-central-1.staging.api.xcover.com",
+        "Expect": null,
+        "Accept-Encoding": null,
+        "User-Agent": "GuzzleHttp\/6.5.0 curl\/7.64.1 PHP\/7.3.9",
+        "Content-Type": "application\/json",
+        "Date": "Sun, 29 Dec 2019 06:58:03 GMT",
+        "Accept": null
+      },
+      "body": "{\"request\":[{\"policy_type\":\"event_ticket_protection\",\"policy_type_version\":1,\"policy_start_date\":\"2019-12-30T06:58:03.533+00:00\",\"event_datetime\":\"2019-12-30T06:58:03.533+00:00\",\"event_name\":\"Ariana Grande\",\"event_location\":\"The O2\",\"number_of_tickets\":2,\"total_ticket_price\":100,\"resale_ticket\":false,\"event_country\":\"GB\"}],\"currency\":\"GBP\",\"customer_country\":\"GB\",\"customer_region\":\"London\",\"customer_language\":\"en\"}"
+    },
+    "response": {
+      "status": {
+        "http_version": "1.1",
+        "code": "201",
+        "message": "Created"
+      },
+      "headers": {
+        "Date": "Sun, 29 Dec 2019 06:58:04 GMT",
+        "Content-Type": "application\/json",
+        "Content-Length": "1993",
+        "Connection": "keep-alive",
+        "Allow": "GET, POST, DELETE, HEAD, OPTIONS",
+        "Server": "nginx",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Ratelimit-Limit": "-1",
+        "X-Ratelimit-Remaining": "-1",
+        "X-Ratelimit-Reset": "1568836675"
+      },
+      "body": "{\"id\":\"PXCXX-46M9R-INS\",\"status\":\"RECEIVED\",\"currency\":\"GBP\",\"total_price\":5.0,\"total_price_formatted\":\"\u00a3\u00a05.00\",\"partner_transaction_id\":null,\"created_at\":\"2019-12-29T06:58:04.767420Z\",\"updated_at\":\"2019-12-29T06:58:04.767433Z\",\"pds_url\":\"https:\/\/staging.xcover.com\/en\/pds\/PXCXX-46M9R-INS\",\"quotes\":{\"0\":{\"id\":\"7828e4f8-2e7a-4999-85b0-a0ba5e568eee\",\"policy_start_date\":\"2019-12-30T06:58:03.533000+00:00\",\"policy_end_date\":\"2019-12-30T06:58:03.533000+00:00\",\"status\":\"RECEIVED\",\"price\":5.0,\"price_formatted\":\"\u00a3\u00a05.00\",\"policy\":{\"policy_type\":\"event_ticket_protection\",\"policy_name\":\"Ticket Protection\",\"policy_code\":\"ETIX01\",\"policy_version\":\"4ac88ab6-5714-4a67-ad6c-9466e2b05a48\",\"category\":null,\"content\":{\"title\":\"Ticket Protection\",\"header\":\"Ticket Protection\",\"description\":\"Covers the purchase cost of tickets (up to a maximum of \u00a3500) if you are unable to attend a booked event as result of an unexpected circumstance.\",\"optout_msg\":\"<p><\/p>\",\"disclaimer\":\"This plan is arranged by XCover.com\"},\"underwriter\":{\"disclaimer\":\"this is a disclaimer\",\"name\":\"Asservo\"}},\"insured\":null,\"tax\":{\"total_tax\":0.0,\"total_amount_without_tax\":5.0,\"total_tax_formatted\":\"\u00a3\u00a00.00\",\"total_amount_without_tax_formatted\":\"\u00a3\u00a05.00\",\"taxes\":[]},\"duration\":\"00:00:00\",\"benefits\":[],\"commission\":{\"total_commission\":0.0,\"total_commission_formatted\":\"\u00a3\u00a00.00\"},\"created_at\":\"2019-12-29T06:58:04.762909Z\",\"confirmed_at\":null,\"updated_at\":\"2019-12-29T06:58:04.762923Z\",\"cancelled_at\":null,\"is_renewable\":false,\"cover_amount\":null,\"cover_amount_formatted\":null,\"pending_renewal\":null,\"pds_url\":\"https:\/\/staging.xcover.com\/en\/pds\/PXCXX-46M9R-INS?policy_type=event_ticket_protection_v1\",\"discount_price\":5.0,\"discount_price_formatted\":\"\u00a3\u00a05.00\",\"discount_amount\":0.0,\"discount_amount_formatted\":\"\u00a3\u00a00.00\"}},\"bundle_code\":null,\"bundle_price\":5.0,\"bundle_content\":{},\"bundle_price_formatted\":\"\u00a3\u00a05.00\",\"bundle_discount_percent\":0.0,\"bundle_discount_amount\":0.0,\"bundle_discount_amount_formatted\":\"\u00a3\u00a00.00\"}"
+    }
+  },
+  {
+    "request": {
+      "method": "POST",
+      "url": "https:\/\/eu-central-1.staging.api.xcover.com\/xcover\/partners\/LLODT\/bookings\/PXCXX-46M9R-INS\/",
+      "headers": {
+        "Host": "eu-central-1.staging.api.xcover.com",
+        "Expect": null,
+        "Accept-Encoding": null,
+        "User-Agent": "GuzzleHttp\/6.5.0 curl\/7.64.1 PHP\/7.3.9",
+        "Content-Type": "application\/json",
+        "Date": "Sun, 29 Dec 2019 06:58:04 GMT",
+        "Accept": null
+      },
+      "body": "{\"quotes\":[{\"id\":\"7828e4f8-2e7a-4999-85b0-a0ba5e568eee\",\"insured\":[{\"first_name\":\"John\",\"last_name\":\"Bon Jovi\",\"email\":\"john.bon.jovi@gmail.com\",\"age\":30}]}],\"policyholder\":{\"first_name\":\"John\",\"last_name\":\"Bon Jovi\",\"email\":\"john.bon.jovi@gmail.com\",\"age\":30,\"country\":\"GB\"}}"
+    },
+    "response": {
+      "status": {
+        "http_version": "1.1",
+        "code": "200",
+        "message": "OK"
+      },
+      "headers": {
+        "Date": "Sun, 29 Dec 2019 06:58:06 GMT",
+        "Content-Type": "application\/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Allow": "GET, POST, PATCH, HEAD, OPTIONS",
+        "Server": "nginx",
+        "Vary": "Accept-Encoding",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Ratelimit-Limit": "-1",
+        "X-Ratelimit-Remaining": "-1",
+        "X-Ratelimit-Reset": "1568836675"
+      },
+      "body": "{\"id\":\"PXCXX-46M9R-INS\",\"status\":\"CONFIRMED\",\"currency\":\"GBP\",\"total_price\":5.0,\"total_price_formatted\":\"\u00a3\u00a05.00\",\"partner_transaction_id\":null,\"created_at\":\"2019-12-29T06:58:04.767420Z\",\"updated_at\":\"2019-12-29T06:58:06.245626Z\",\"pds_url\":\"https:\/\/staging.xcover.com\/en\/pds\/PXCXX-46M9R-INS\",\"quotes\":[{\"id\":\"7828e4f8-2e7a-4999-85b0-a0ba5e568eee\",\"policy_start_date\":\"2019-12-30T06:58:03.533000+00:00\",\"policy_end_date\":\"2019-12-30T06:58:03.533000+00:00\",\"status\":\"CONFIRMED\",\"price\":5.0,\"price_formatted\":\"\u00a3\u00a05.00\",\"policy\":{\"policy_type\":\"event_ticket_protection\",\"policy_name\":\"Ticket Protection\",\"policy_code\":\"ETIX01\",\"policy_version\":\"4ac88ab6-5714-4a67-ad6c-9466e2b05a48\",\"category\":null,\"content\":{\"title\":\"Ticket Protection\",\"header\":\"Ticket Protection\",\"description\":\"Covers the purchase cost of tickets (up to a maximum of \u00a3500) if you are unable to attend a booked event as result of an unexpected circumstance.\",\"optout_msg\":\"<p><\/p>\",\"disclaimer\":\"This plan is arranged by XCover.com\"},\"underwriter\":{\"disclaimer\":\"this is a disclaimer\",\"name\":\"Asservo\"}},\"insured\":[{\"id\":\"615d2a66-44c3-40d0-a51f-8465ad50b022\",\"first_name\":\"John\",\"last_name\":\"Bon Jovi\",\"email\":\"john.bon.jovi@gmail.com\",\"region\":null,\"age\":30}],\"tax\":{\"total_tax\":0.0,\"total_amount_without_tax\":5.0,\"total_tax_formatted\":\"\u00a3\u00a00.00\",\"total_amount_without_tax_formatted\":\"\u00a3\u00a05.00\",\"taxes\":[]},\"duration\":\"00:00:00\",\"benefits\":[],\"commission\":{\"total_commission\":0.0,\"total_commission_formatted\":\"\u00a3\u00a00.00\"},\"created_at\":\"2019-12-29T06:58:04.762909Z\",\"confirmed_at\":\"2019-12-29T06:58:06.232955Z\",\"updated_at\":\"2019-12-29T06:58:06.241895Z\",\"cancelled_at\":null,\"is_renewable\":false,\"cover_amount\":null,\"cover_amount_formatted\":null,\"pending_renewal\":null,\"pds_url\":\"https:\/\/staging.xcover.com\/en\/pds\/PXCXX-46M9R-INS?policy_type=event_ticket_protection_v1\",\"can_be_cancelled\":false}],\"coi\":{\"url\":\"https:\/\/staging.xcover.com\/en\/coi\/PXCXX-46M9R-INS?security_token=REMOVED\",\"pdf\":\"https:\/\/staging.xcover.com\/en\/coi\/PXCXX-46M9R-INS.pdf?security_token=REMOVED\"},\"account_url\":\"https:\/\/staging.xcover.com\/en\/account?id=23b15dc7-6aa5-4aa4-9bf2-164a90c1e1c7&signup_token=REMOVED\",\"policyholder\":{\"first_name\":\"John\",\"last_name\":\"Bon Jovi\",\"email\":\"john.bon.jovi@gmail.com\",\"country\":\"GB\",\"age\":30,\"address1\":null,\"address2\":null,\"city\":null,\"postcode\":null,\"region\":\"London\",\"phone\":null,\"secondary_email\":null,\"birth_date\":null,\"company\":null},\"total_tax\":0.0,\"total_tax_formatted\":\"\u00a3\u00a00.00\",\"total_premium\":5.0,\"total_premium_formatted\":\"\u00a3\u00a05.00\"}"
+    }
+  },
+  {
+    "request": {
+      "method": "PATCH",
+      "url": "https:\/\/eu-central-1.staging.api.xcover.com\/xcover\/partners\/LLODT\/bookings\/PXCXX-46M9R-INS\/",
+      "headers": {
+        "Host": "eu-central-1.staging.api.xcover.com",
+        "Expect": null,
+        "Accept-Encoding": null,
+        "User-Agent": "GuzzleHttp\/6.5.0 curl\/7.64.1 PHP\/7.3.9",
+        "Content-Type": "application\/json",
+        "Date": "Sun, 29 Dec 2019 06:58:06 GMT",
+        "Accept": null
+      },
+      "body": "{\"malformed\":\"payload\"}"
+    },
+    "response": {
+      "status": {
+        "http_version": "1.1",
+        "code": "422",
+        "message": "Unprocessable Entity"
+      },
+      "headers": {
+        "Date": "Sun, 29 Dec 2019 06:58:07 GMT",
+        "Content-Type": "application\/json",
+        "Content-Length": "104",
+        "Connection": "keep-alive",
+        "Allow": "GET, POST, PATCH, HEAD, OPTIONS",
+        "Server": "nginx",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Ratelimit-Limit": "-1",
+        "X-Ratelimit-Remaining": "-1",
+        "X-Ratelimit-Reset": "1568836675"
+      },
+      "body": "{\"type\":\"validation_error\",\"message\":\"An API error occurred.\",\"errors\":{\"malformed\":\"Unexpected field\"}}"
+    }
+  }
+]

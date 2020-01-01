@@ -1,0 +1,16 @@
+{
+  "request": [
+    {
+      "policy_type": "event_ticket_protection",
+      "policy_type_version": 1,
+      "policy_start_date": "{{policy_start_date}}",
+      "event_datetime": "{{policy_start_date}}",
+      "event_name": "Ariana Grande",
+      "event_location": "The O2",
+      "number_of_tickets": 2,
+      "total_ticket_price": 100.00,
+      "resale_ticket": false,
+      "event_country": "GB"
+    }
+  ]
+}

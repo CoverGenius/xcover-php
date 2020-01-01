@@ -1,0 +1,38 @@
+[
+  {
+    "request": {
+      "method": "POST",
+      "url": "https:\/\/eu-central-1.staging.api.xcover.com\/xcover\/partners\/LLODT\/quotes\/",
+      "headers": {
+        "Host": "eu-central-1.staging.api.xcover.com",
+        "Content-Length": "0",
+        "Accept-Encoding": null,
+        "Content-Type": "application\/json",
+        "User-Agent": "GuzzleHttp\/6.5.0 curl\/7.64.1 PHP\/7.3.9",
+        "Date": "Tue, 24 Dec 2019 04:06:08 GMT",
+        "Accept": null
+      }
+    },
+    "response": {
+      "status": {
+        "http_version": "1.1",
+        "code": "422",
+        "message": "Unprocessable Entity"
+      },
+      "headers": {
+        "Date": "Tue, 24 Dec 2019 04:06:10 GMT",
+        "Content-Type": "application\/json",
+        "Content-Length": "197",
+        "Connection": "keep-alive",
+        "Allow": "GET, POST, DELETE, HEAD, OPTIONS",
+        "Server": "nginx",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Ratelimit-Limit": "-1",
+        "X-Ratelimit-Remaining": "-1",
+        "X-Ratelimit-Reset": "1568836675"
+      },
+      "body": "{\"type\":\"validation_error\",\"message\":\"An API error occurred.\",\"errors\":{\"currency\":[\"This field is required.\"],\"request\":[\"This field is required.\"],\"customer_country\":[\"This field is required.\"]}}"
+    }
+  }
+]

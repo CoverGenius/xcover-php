@@ -1,0 +1,37 @@
+[
+  {
+    "request": {
+      "method": "PATCH",
+      "url": "https:\/\/eu-central-1.staging.api.xcover.com\/xcover\/partners\/LLODT\/renewals\/IvtoW-zEZqf-REN\/confirmation",
+      "headers": {
+        "Host": "eu-central-1.staging.api.xcover.com",
+        "Expect": null,
+        "Accept-Encoding": null,
+        "Content-Type": "application\/json",
+        "User-Agent": "GuzzleHttp\/6.5.0 curl\/7.64.1 PHP\/7.3.9",
+        "Date": "Wed, 01 Jan 2020 14:16:49 GMT",
+        "Accept": null
+      },
+      "body": "{\"paid_on\":\"2019-12-20 02:42:12Z\"}"
+    },
+    "response": {
+      "status": {
+        "http_version": "1.1",
+        "code": "202",
+        "message": "Accepted"
+      },
+      "headers": {
+        "Date": "Wed, 01 Jan 2020 14:16:51 GMT",
+        "Content-Length": "0",
+        "Connection": "keep-alive",
+        "Allow": "PATCH, OPTIONS",
+        "Server": "nginx",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Ratelimit-Limit": "-1",
+        "X-Ratelimit-Remaining": "-1",
+        "X-Ratelimit-Reset": "1568836675"
+      }
+    }
+  }
+]
