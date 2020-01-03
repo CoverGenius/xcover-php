@@ -6,6 +6,7 @@
     "insurance",
     "api"
   ],
+  "license": "MIT",
   "homepage": "https://www.covergenius.com/xcover/",
   "type": "library",
   "authors": [
