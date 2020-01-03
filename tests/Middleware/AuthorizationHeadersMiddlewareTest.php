@@ -24,7 +24,7 @@ class AuthorizationHeadersMiddlewareTest extends TestCase
 
         $authorizationOptions = array_merge(
             ['apiKey' => 'some-api-key'],
-            ['apiSecret' => 'some-api-secret'],
+            ['apiSecret' => 'some-api-secret']
         );
 
         $stack->push(new AuthMiddleware($authorizationOptions));

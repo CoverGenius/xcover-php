@@ -1,6 +1,12 @@
 {
-  "name": "covergenius/xcover-php-sdk",
-  "description": "XCover API client for PHP.",
+  "name": "covergenius/xcover-php",
+  "description": "XCover API SDK for PHP",
+  "keywords": [
+    "xcover",
+    "insurance",
+    "api"
+  ],
+  "homepage": "https://www.covergenius.com/xcover/",
   "type": "library",
   "authors": [
     {
@@ -13,7 +19,7 @@
     }
   ],
   "require": {
-    "php": ">=5.6.0",
+    "php": ">=7.1.0",
     "guzzlehttp/guzzle": "^6.3.3",
     "ext-json": "*"
   },
@@ -53,8 +59,5 @@
     "optimize-autoloader": true
   },
   "minimum-stability": "dev",
-  "prefer-stable": true,
-  "platform": {
-    "php": ">=5.6.0"
-  }
+  "prefer-stable": true
 }

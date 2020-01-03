@@ -193,7 +193,8 @@ class XCoverTest extends BaseTestCase
         $quote = $this->createQuote();
 
         $client = $this->getClient();
-        $client->optOut($quote['id'],
+        $client->optOut(
+            $quote['id'],
             [
                 'malformed_payload' => true,
             ]
@@ -210,7 +211,8 @@ class XCoverTest extends BaseTestCase
         $quote = $this->createQuote();
 
         $client = $this->getClient();
-        $response = $client->optOut($quote['id'],
+        $response = $client->optOut(
+            $quote['id'],
             [
                 'partner_metadata' => [
                     'extras_purchased' => true,
@@ -278,7 +280,8 @@ class XCoverTest extends BaseTestCase
     {
         $quote = $this->createQuote();
         $client = $this->getClient();
-        $response = $client->addQuotes($quote['id'], $this->getPayloadFromFile('sample-add-quote.json',
+        $response = $client->addQuotes($quote['id'], $this->getPayloadFromFile(
+            'sample-add-quote.json',
             [
                 'policy_start_date' => $this->getNow(),
             ]
@@ -300,7 +303,8 @@ class XCoverTest extends BaseTestCase
     {
         $client = $this->getClient();
         $quote = $client->createQuote(
-            $this->getPayloadFromFile('sample-create-quote.json',
+            $this->getPayloadFromFile(
+                'sample-create-quote.json',
                 [
                     'policy_start_date' => $this->getNow(),
                 ]
@@ -321,7 +325,8 @@ class XCoverTest extends BaseTestCase
     {
         $client = $this->getClient();
         $quote = $client->createQuote(
-            $this->getPayloadFromFile('sample-create-multiple-quote.json',
+            $this->getPayloadFromFile(
+                'sample-create-multiple-quote.json',
                 [
                     'policy_start_date' => $this->getNow(),
                 ]
@@ -519,7 +524,8 @@ class XCoverTest extends BaseTestCase
         $client = $this->getClient();
 
         $response = $client->createQuote(
-            $this->getPayloadFromFile('sample-create-quote.json',
+            $this->getPayloadFromFile(
+                'sample-create-quote.json',
                 [
                     'policy_start_date' => $this->getNow(),
                 ]

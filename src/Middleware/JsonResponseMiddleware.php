@@ -32,7 +32,7 @@ class JsonResponseMiddleware
                         $response->getHeaders(),
                         $response->getBody(),
                         $response->getProtocolVersion(),
-                        $response->getReasonPhrase(),
+                        $response->getReasonPhrase()
                     );
                 }
             );
