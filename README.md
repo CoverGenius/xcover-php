@@ -8,6 +8,14 @@ The library is based on Guzzle 6 HTTP client and offers the following features:
   * HTTP abstraction in XCover class
   * Automatic response status code validation and custom exception classes
 
+## Installation
+
+XCover SDK is available on [Packagist](https://packagist.org/packages/covergenius/xcover-php) and the recommended way of installing it is via [Composer](https://getcomposer.org/).
+
+```bash
+composer require covergenius/xcover-php
+```
+
 ## Usage
 
 ### Basic usage
