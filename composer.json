@@ -25,8 +25,8 @@
     "ext-json": "*"
   },
   "require-dev": {
-    "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
-    "php-vcr/php-vcr": "master as 1.4.5",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+    "php-vcr/php-vcr": "^1.4",
     "php-vcr/phpunit-testlistener-vcr": "^3.2",
     "phpunit/phpunit": "^7.0",
     "symfony/var-dumper": "^4.2",
