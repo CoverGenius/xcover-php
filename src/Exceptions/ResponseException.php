@@ -39,7 +39,7 @@ class ResponseException extends XCoverException
      *
      * @return mixed
      */
-    private function getFromResponse($key, $default = null)
+    protected function getFromResponse($key, $default = null)
     {
         if ($this->response instanceof Response && $this->response->isJsonResponse()) {
             $responseData = $this->response->json();
@@ -47,5 +47,15 @@ class ResponseException extends XCoverException
         }
 
         return $default;
+    }
+
+    /**
+     * Response getter
+     *
+     * @return Response
+     */
+    public function getResponse()
+    {
+        return $this->response;
     }
 }
