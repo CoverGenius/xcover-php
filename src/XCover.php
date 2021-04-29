@@ -221,7 +221,7 @@ class XCover
      */
     public function instantBooking(array $payload = null, array $queryParams = [])
     {
-        $requestUri = '/instant_booking';
+        $requestUri = '/instant_booking/';
 
         return $this->call('POST', $requestUri, 200, $payload, $queryParams);
     }
