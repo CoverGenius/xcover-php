@@ -1,7 +1,7 @@
 [{
     "request": {
         "method": "POST",
-        "url": "https:\/\/eu-central-1.staging.api.xcover.com\/xcover\/partners\/LLODT\/instant_booking",
+        "url": "https:\/\/eu-central-1.staging.api.xcover.com\/xcover\/partners\/LLODT\/instant_booking\/",
         "headers": {
             "Host": "eu-central-1.staging.api.xcover.com",
             "Expect": null,
