@@ -21,8 +21,8 @@
   ],
   "require": {
     "php": ">=7.1.0",
-    "guzzlehttp/guzzle": "^6.3.3",
-    "ext-json": "*"
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "^7.1.1"
   },
   "require-dev": {
     "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
