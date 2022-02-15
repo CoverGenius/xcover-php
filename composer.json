@@ -21,12 +21,12 @@
   ],
   "require": {
     "php": ">=7.1.0",
-    "guzzlehttp/guzzle": "^6.3.3",
+    "guzzlehttp/guzzle": "^7.2",
     "ext-json": "*"
   },
   "require-dev": {
     "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
-    "php-vcr/php-vcr": "master as 1.4.5",
+    "php-vcr/php-vcr": "^1.5.2",
     "php-vcr/phpunit-testlistener-vcr": "^3.2",
     "phpunit/phpunit": "^7.0",
     "symfony/var-dumper": "^4.2",
@@ -60,11 +60,5 @@
     "optimize-autoloader": true
   },
   "minimum-stability": "dev",
-  "prefer-stable": true,
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/CoverGenius/php-vcr"
-    }
-  ]
+  "prefer-stable": true
 }
