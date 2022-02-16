@@ -12,6 +12,10 @@ The library is based on Guzzle 6 HTTP client and offers the following features:
 
 XCover SDK is available on [Packagist](https://packagist.org/packages/covergenius/xcover-php) and the recommended way of installing it is via [Composer](https://getcomposer.org/).
 
+V1 releases are for PHP 7.2 or higher (but less than 8)
+
+V2 releases are for PHP 8
+
 ```bash
 composer require covergenius/xcover-php
 ```

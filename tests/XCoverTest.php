@@ -140,13 +140,12 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     * @expectedException \XCoverClient\Exceptions\ResponseException
-     * @expectedExceptionMessage validation_error
-     *
      * @vcr create_quote_422.json
      */
     public function create_quote_422()
     {
+        $this->expectException(\XCoverClient\Exceptions\ResponseException::class);
+        $this->expectExceptionMessage("validation_error");
         $client = $this->getClient();
         $client->createQuote(
             [
@@ -163,7 +162,7 @@ class XCoverTest extends BaseTestCase
     public function create_quote_success()
     {
         $quote = $this->createQuote();
-        $this->assertRegExp('/\-INS$/', $quote['id']);
+        $this->assertMatchesRegularExpression('/\-INS$/', $quote['id']);
     }
 
     /**
@@ -183,13 +182,12 @@ class XCoverTest extends BaseTestCase
     /**
      * @test
      *
-     * @expectedException \XCoverClient\Exceptions\ResponseException
-     * @expectedExceptionMessage validation_error
-     *
      * @vcr opt_out_422.json
      */
     public function opt_out_422()
     {
+        $this->expectException(\XCoverClient\Exceptions\ResponseException::class);
+        $this->expectExceptionMessage("validation_error");
         $quote = $this->createQuote();
 
         $client = $this->getClient();
@@ -240,13 +238,12 @@ class XCoverTest extends BaseTestCase
     /**
      * @test
      *
-     * @expectedException \XCoverClient\Exceptions\ResponseException
-     * @expectedExceptionMessage validation_error
-     *
      * @vcr update_quote_422.json
      */
     public function update_quote_422()
     {
+        $this->expectException(\XCoverClient\Exceptions\ResponseException::class);
+        $this->expectExceptionMessage("validation_error");
         $quote = $this->createQuote();
         $client = $this->getClient();
         $client->updateQuote($quote['id'], [
@@ -257,13 +254,12 @@ class XCoverTest extends BaseTestCase
     /**
      * @test
      *
-     * @expectedException \XCoverClient\Exceptions\ResponseException
-     * @expectedExceptionMessage validation_error
-     *
      * @vcr add_quotes_422.json
      */
     public function add_quotes_422()
     {
+        $this->expectException(\XCoverClient\Exceptions\ResponseException::class);
+        $this->expectExceptionMessage("validation_error");
         $quote = $this->createQuote();
         $client = $this->getClient();
         $client->addQuotes($quote['id'], [
@@ -294,13 +290,12 @@ class XCoverTest extends BaseTestCase
     /**
      * @test
      *
-     * @expectedException \XCoverClient\Exceptions\ResponseException
-     * @expectedExceptionMessage validation_error
-     *
      * @vcr delete_quotes_422.json
      */
     public function delete_quotes_422()
     {
+        $this->expectException(\XCoverClient\Exceptions\ResponseException::class);
+        $this->expectExceptionMessage("validation_error");
         $client = $this->getClient();
         $quote = $client->createQuote(
             $this->getPayloadFromFile(
@@ -360,13 +355,12 @@ class XCoverTest extends BaseTestCase
     /**
      * @test
      *
-     * @expectedException \XCoverClient\Exceptions\ResponseException
-     * @expectedExceptionMessage validation_error
-     *
      * @vcr update_booking_422.json
      */
     public function update_booking_422()
     {
+        $this->expectException(\XCoverClient\Exceptions\ResponseException::class);
+        $this->expectExceptionMessage("validation_error");
         $booking = $this->createBooking();
         $client = $this->getClient();
         $client->updateBooking($booking['id'], [
@@ -395,13 +389,12 @@ class XCoverTest extends BaseTestCase
     /**
      * @test
      *
-     * @expectedException \XCoverClient\Exceptions\ResponseException
-     * @expectedExceptionMessage validation_error
-     *
      * @vcr cancel_booking_422.json
      */
     public function cancel_booking_422()
     {
+        $this->expectException(\XCoverClient\Exceptions\ResponseException::class);
+        $this->expectExceptionMessage("validation_error");
         $booking = $this->createBooking();
         $client = $this->getClient();
         $client->cancelBooking($booking['id'], [

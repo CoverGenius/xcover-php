@@ -9,11 +9,10 @@ class ConfigTest extends BaseTestCase
 {
     /**
      * @test
-     *
-     * @expectedException \XCoverClient\Exceptions\XCoverException
      */
     public function client_throws_error_if_base_url_is_empty()
     {
+        $this->expectException(\XCoverClient\Exceptions\XCoverException::class);
         new Config([
             'baseUrl' => '',
             'apiPrefix' => env('API_PREFIX'),
@@ -26,10 +25,11 @@ class ConfigTest extends BaseTestCase
     /**
      * @test
      *
-     * @expectedException \XCoverClient\Exceptions\XCoverException
+     *
      */
     public function client_throws_error_if_api_key_is_empty()
     {
+        $this->expectException(\XCoverClient\Exceptions\XCoverException::class);
         new Config([
             'baseUrl' => env('BASE_URL'),
             'apiPrefix' => env('API_PREFIX'),
@@ -42,10 +42,11 @@ class ConfigTest extends BaseTestCase
     /**
      * @test
      *
-     * @expectedException \XCoverClient\Exceptions\XCoverException
+     *
      */
     public function client_throws_error_if_api_secret_is_empty()
     {
+        $this->expectException(\XCoverClient\Exceptions\XCoverException::class);
         new Config([
             'baseUrl' => env('BASE_URL'),
             'apiPrefix' => env('API_PREFIX'),
@@ -58,10 +59,11 @@ class ConfigTest extends BaseTestCase
     /**
      * @test
      *
-     * @expectedException \XCoverClient\Exceptions\XCoverException
+     *
      */
     public function client_throws_error_if_partner_is_empty()
     {
+        $this->expectException(\XCoverClient\Exceptions\XCoverException::class);
         new Config([
             'baseUrl' => env('BASE_URL'),
             'apiPrefix' => env('API_PREFIX'),

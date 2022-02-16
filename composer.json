@@ -26,9 +26,9 @@
   },
   "require-dev": {
     "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
-    "php-vcr/php-vcr": "^1.5.2",
-    "php-vcr/phpunit-testlistener-vcr": "^3.2",
-    "phpunit/phpunit": "^7.0",
+    "php-vcr/php-vcr": "^1.6.0",
+    "php-vcr/phpunit-testlistener-vcr": "master as 3.2.1",
+    "phpunit/phpunit": "^9.0",
     "symfony/var-dumper": "^4.2",
     "vlucas/phpdotenv": "^2.5"
   },
@@ -60,5 +60,11 @@
     "optimize-autoloader": true
   },
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/CoverGenius/phpunit-testlistener-vcr"
+    }
+  ]
 }
