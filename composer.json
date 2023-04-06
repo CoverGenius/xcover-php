@@ -27,7 +27,7 @@
   "require-dev": {
     "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
     "php-vcr/php-vcr": "^1.5.2",
-    "php-vcr/phpunit-testlistener-vcr": "^3.3.1",
+    "covergenius/phpunit-testlistener-vcr": "^3.3.1",
     "phpunit/phpunit": "^9.0",
     "symfony/var-dumper": "^4.2",
     "vlucas/phpdotenv": "^2.5"
