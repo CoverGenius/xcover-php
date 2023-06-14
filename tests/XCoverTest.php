@@ -2,6 +2,7 @@
 
 namespace Tests;
 
+use VCR\VCR;
 use XCoverClient\Config;
 use XCoverClient\Response;
 use XCoverClient\Tests\BaseTestCase;
@@ -11,11 +12,10 @@ class XCoverTest extends BaseTestCase
 {
     /**
      * @test
-     *
-     * @vcr can_make_a_get_request.json
      */
     public function can_make_a_get_request()
     {
+        VCR::insertCassette('can_make_a_get_request.json');
         $client = $this->getClient();
         $response = $client->call('GET', '/', 200, []);
         $this->assertInstanceOf(Response::class, $response);
@@ -23,11 +23,11 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     *
-     * @vcr can_make_a_post_request.json
      */
     public function can_make_a_post_request()
     {
+        VCR::insertCassette('can_make_a_post_request.json');
+
         $client = $this->getClient();
         $response = $client->call('POST', '/', 201, []);
         $this->assertInstanceOf(Response::class, $response);
@@ -35,11 +35,10 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     *
-     * @vcr create_booking_success.json
      */
     public function create_booking_success()
     {
+        VCR::insertCassette('create_booking_success.json');
         $responseBody = $this->createBooking();
         $this->assertArrayHasKey('quotes', $responseBody);
         $this->assertArrayHasKey('policyholder', $responseBody);
@@ -81,11 +80,11 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     *
-     * @vcr get_booking_success.json
      */
     public function get_booking_success()
     {
+        VCR::insertCassette('get_booking_success.json');
+
         $booking = $this->createBooking();
 
         $client = $this->getClient();
@@ -108,11 +107,11 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     *
-     * @vcr get_booking_with_query_params_success.json
      */
     public function get_booking_with_query_params_success()
     {
+        VCR::insertCassette('get_booking_with_query_params_success.json');
+
         $booking = $this->createBooking();
 
         $client = $this->getClient();
@@ -140,10 +139,11 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     * @vcr create_quote_422.json
      */
     public function create_quote_422()
     {
+        VCR::insertCassette('create_quote_422.json');
+
         $this->expectException(\XCoverClient\Exceptions\ResponseException::class);
         $this->expectExceptionMessage("validation_error");
         $client = $this->getClient();
@@ -156,22 +156,22 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     *
-     * @vcr create_quote_success.json
      */
     public function create_quote_success()
     {
+        VCR::insertCassette('create_quote_success.json');
+
         $quote = $this->createQuote();
         $this->assertMatchesRegularExpression('/\-INS$/', $quote['id']);
     }
 
     /**
      * @test
-     *
-     * @vcr get_quote_success.json
      */
     public function get_quote_success()
     {
+        VCR::insertCassette('get_quote_success.json');
+
         $quote = $this->createQuote();
 
         $client = $this->getClient();
@@ -181,11 +181,11 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     *
-     * @vcr opt_out_422.json
      */
     public function opt_out_422()
     {
+        VCR::insertCassette('opt_out_422.json');
+
         $this->expectException(\XCoverClient\Exceptions\ResponseException::class);
         $this->expectExceptionMessage("validation_error");
         $quote = $this->createQuote();
@@ -201,11 +201,11 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     *
-     * @vcr opt_out_success.json
      */
     public function opt_out_success()
     {
+        VCR::insertCassette('opt_out_success.json');
+
         $quote = $this->createQuote();
 
         $client = $this->getClient();
@@ -222,11 +222,11 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     *
-     * @vcr update_quote_success.json
      */
     public function update_quote_success()
     {
+        VCR::insertCassette('update_quote_success.json');
+
         $quote = $this->createQuote();
         $client = $this->getClient();
         $response = $client->updateQuote($quote['id'], [
@@ -237,11 +237,11 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     *
-     * @vcr update_quote_422.json
      */
     public function update_quote_422()
     {
+        VCR::insertCassette('update_quote_422.json');
+
         $this->expectException(\XCoverClient\Exceptions\ResponseException::class);
         $this->expectExceptionMessage("validation_error");
         $quote = $this->createQuote();
@@ -253,11 +253,11 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     *
-     * @vcr add_quotes_422.json
      */
     public function add_quotes_422()
     {
+        VCR::insertCassette('add_quotes_422.json');
+
         $this->expectException(\XCoverClient\Exceptions\ResponseException::class);
         $this->expectExceptionMessage("validation_error");
         $quote = $this->createQuote();
@@ -269,11 +269,11 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     *
-     * @vcr add_quotes_success.json
      */
     public function add_quote_success()
     {
+        VCR::insertCassette('add_quotes_success.json');
+
         $quote = $this->createQuote();
         $client = $this->getClient();
         $response = $client->addQuotes($quote['id'], $this->getPayloadFromFile(
@@ -289,11 +289,11 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     *
-     * @vcr delete_quotes_422.json
      */
     public function delete_quotes_422()
     {
+        VCR::insertCassette('delete_quotes_422.json');
+
         $this->expectException(\XCoverClient\Exceptions\ResponseException::class);
         $this->expectExceptionMessage("validation_error");
         $client = $this->getClient();
@@ -313,11 +313,11 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     *
-     * @vcr delete_quotes_success.json
      */
     public function delete_quotes_success()
     {
+        VCR::insertCassette('delete_quotes_success.json');
+
         $client = $this->getClient();
         $quote = $client->createQuote(
             $this->getPayloadFromFile(
@@ -342,11 +342,11 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     *
-     * @vcr list_bookings.json
      */
     public function list_bookings()
     {
+        VCR::insertCassette('list_bookings.json');
+
         $client = $this->getClient();
         $bookings = $client->listBookings(['limit' => 10])->json();
         $this->assertCount(10, $bookings['results']);
@@ -354,11 +354,11 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     *
-     * @vcr update_booking_422.json
      */
     public function update_booking_422()
     {
+        VCR::insertCassette('update_booking_422.json');
+
         $this->expectException(\XCoverClient\Exceptions\ResponseException::class);
         $this->expectExceptionMessage("validation_error");
         $booking = $this->createBooking();
@@ -370,11 +370,11 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     *
-     * @vcr update_booking_success.json
      */
     public function update_booking_success()
     {
+        VCR::insertCassette('update_booking_success.json');
+
         $booking = $this->createBooking();
         $client = $this->getClient();
         $response = $client->updateBooking($booking['id'], [
@@ -388,11 +388,11 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     *
-     * @vcr cancel_booking_422.json
      */
     public function cancel_booking_422()
     {
+        VCR::insertCassette('cancel_booking_422.json');
+
         $this->expectException(\XCoverClient\Exceptions\ResponseException::class);
         $this->expectExceptionMessage("validation_error");
         $booking = $this->createBooking();
@@ -404,11 +404,11 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     *
-     * @vcr cancel_booking_success.json
      */
     public function cancel_booking_success()
     {
+        VCR::insertCassette('cancel_booking_success.json');
+
         $booking = $this->createBooking();
         $client = $this->getClient();
         $response = $client->cancelBooking($booking['id'], [
@@ -423,11 +423,11 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     *
-     * @vcr confirm_booking_success.json
      */
     public function confirm_booking_success()
     {
+        VCR::insertCassette('confirm_booking_success.json');
+
         $client = $this->getClient();
 
         $quote = $this->createQuote();
@@ -442,11 +442,11 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     *
-     * @vcr update_with_confirmation_success.json
      */
     public function update_with_confirmation_success()
     {
+        VCR::insertCassette('update_with_confirmation_success.json');
+
         $client = $this->getClient();
         $booking = $this->createBooking();
 
@@ -465,11 +465,11 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     *
-     * @vcr cancellation_with_confirmation_success.json
      */
     public function cancellation_with_confirmation_success()
     {
+        VCR::insertCassette('cancellation_with_confirmation_success.json');
+
         $client = $this->getClient();
         $booking = $this->createBooking();
 
@@ -485,11 +485,11 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     *
-     * @vcr instant_booking_success.json
      */
     public function instant_booking_success()
     {
+        VCR::insertCassette('instant_booking_success.json');
+
         $client = $this->getClient();
         $bookingParams = $this->getPayloadFromFile('sample-instant-booking.json', [
             'policy_start_date' => $this->getNow(),
@@ -500,11 +500,11 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
-     *
-     * @vcr renewal_confirmation_success.json
      */
     public function renewal_confirmation_success()
     {
+        VCR::insertCassette('renewal_confirmation_success.json');
+
         $client = $this->getClient();
         $response = $client->confirmRenewal('IvtoW-zEZqf-REN', [
             'paid_on' => '2019-12-20 02:42:12Z',

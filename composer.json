@@ -27,7 +27,6 @@
   "require-dev": {
     "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
     "php-vcr/php-vcr": "^1.5.2",
-    "php-vcr/phpunit-testlistener-vcr": "dev-master as 3.2.1",
     "phpunit/phpunit": "^9.0",
     "symfony/var-dumper": "^4.2",
     "vlucas/phpdotenv": "^2.5"
@@ -57,7 +56,11 @@
   },
   "config": {
     "sort-packages": true,
-    "optimize-autoloader": true
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "php-http/discovery": true
+    }
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
