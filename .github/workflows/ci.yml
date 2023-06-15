@@ -24,7 +24,7 @@ jobs:
         uses: shivammathur/setup-php@master
         with:
           php-version: ${{ matrix.php-version }}
-          extension-csv: json, xdebug
+          extensions: json, xdebug
           coverage: xdebug
 
       - name: validate composer.json
