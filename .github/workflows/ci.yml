@@ -33,5 +33,11 @@ jobs:
       - name: install deps
         run: composer install --prefer-dist --no-progress --no-suggest
 
+      - name: composer audit
+        run: composer audit
+
+      - name: lint
+        run: composer lint
+
       - name: run tests
         run: cp -f .env.pipelines .env && composer test

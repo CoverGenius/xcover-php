@@ -105,6 +105,8 @@ class Config
 
     /**
      * @throws XCoverException
+     *
+     * @return void
      */
     public function validateCredentials()
     {

@@ -2,21 +2,22 @@
 
 namespace XCoverClient\Exceptions;
 
+use Psr\Http\Message\ResponseInterface;
 use XCoverClient\Response;
 
 class ResponseException extends XCoverException
 {
     /**
-     * @var Response The response that threw the exception.
+     * @var ResponseInterface The response that threw the exception.
      */
-    protected $response;
+    protected ResponseInterface $response;
 
     /**
      * Creates a ResponseException.
      *
-     * @param Response $response - The response that generated this exception
+     * @param ResponseInterface $response - The response that generated this exception
      */
-    public function __construct(Response $response)
+    public function __construct(ResponseInterface $response)
     {
         $this->response = $response;
 
@@ -52,7 +53,7 @@ class ResponseException extends XCoverException
     /**
      * Response getter
      *
-     * @return Response
+     * @return ResponseInterface
      */
     public function getResponse()
     {

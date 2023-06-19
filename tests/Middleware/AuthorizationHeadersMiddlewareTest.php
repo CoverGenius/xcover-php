@@ -13,7 +13,11 @@ class AuthorizationHeadersMiddlewareTest extends TestCase
 {
     const ENDPOINT = 'https://example.com/some-fake-uri';
 
-    /** @test */
+    /**
+     * @test
+     *
+     * @return void
+     */
     public function it_can_invoke_authorization_header_to_the_handler_instance()
     {
         $mockHandler = new MockHandler([

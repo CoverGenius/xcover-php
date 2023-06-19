@@ -27,6 +27,7 @@
   "require-dev": {
     "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
     "php-vcr/php-vcr": "^1.5.2",
+    "phpstan/phpstan": "^1.10",
     "phpunit/phpunit": "^9.0",
     "symfony/var-dumper": "^4.2",
     "vlucas/phpdotenv": "^2.5"
@@ -52,7 +53,9 @@
       "@install-codestandards"
     ],
     "test": "./vendor/bin/phpunit --colors=always",
-    "lint": "./vendor/bin/phpcs --warning-severity=6 --runtime-set testVersion 5.6-"
+    "lint": "./vendor/bin/phpcs --warning-severity=6 --runtime-set testVersion 5.6-",
+    "analyse": "./vendor/bin/phpstan analyse",
+    "analyse-ci": "./vendor/bin/phpstan analyse --error-format github > phpstan.json"
   },
   "config": {
     "sort-packages": true,

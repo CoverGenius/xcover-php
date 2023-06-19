@@ -9,6 +9,8 @@ class ConfigTest extends BaseTestCase
 {
     /**
      * @test
+     *
+     * @return void
      */
     public function client_throws_error_if_base_url_is_empty()
     {
@@ -25,7 +27,7 @@ class ConfigTest extends BaseTestCase
     /**
      * @test
      *
-     *
+     * @return void
      */
     public function client_throws_error_if_api_key_is_empty()
     {
@@ -42,7 +44,7 @@ class ConfigTest extends BaseTestCase
     /**
      * @test
      *
-     *
+     * @return void
      */
     public function client_throws_error_if_api_secret_is_empty()
     {
@@ -59,7 +61,7 @@ class ConfigTest extends BaseTestCase
     /**
      * @test
      *
-     *
+     * @return void
      */
     public function client_throws_error_if_partner_is_empty()
     {
