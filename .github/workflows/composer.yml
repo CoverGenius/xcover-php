@@ -24,5 +24,8 @@ jobs:
       - name: validate composer.json
         run: composer validate
 
+      - name: install deps
+        run: composer install --prefer-dist --no-progress --no-suggest
+
       - name: composer audit
         run: composer audit
