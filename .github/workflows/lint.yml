@@ -10,6 +10,12 @@ jobs:
 
     strategy:
       fail-fast: false
+      matrix:
+        php-version:
+          - "7.4"
+          - "8.0"
+          - "8.1"
+          - "8.2"
 
     steps:
       - uses: actions/checkout@master
@@ -17,9 +23,7 @@ jobs:
       - name: setup php
         uses: shivammathur/setup-php@master
         with:
-          php-version: 8.2
-          extensions: json, xdebug
-          coverage: xdebug
+          php-version: ${{ matrix.php-version }}
 
       - name: install deps
         run: composer install --prefer-dist --no-progress --no-suggest
