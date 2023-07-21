@@ -20,7 +20,7 @@
 # XCover SDK for PHP
 
 XCover SDK simplifies [XCover API](https://www.covergenius.com/api/docs/xcover/) integration in PHP applications.     
-The library is based on Guzzle 6 HTTP client and offers the following features:
+The library is based on Guzzle 7 HTTP client and offers the following features:
 
   * AuthMiddleware performs authentication
   * JsonResponseMiddleware provides convenient `json` method on the Guzzle responses 
@@ -33,7 +33,7 @@ XCover SDK is available on [Packagist](https://packagist.org/packages/covergeniu
 
 V1 releases are for PHP 7.2 or higher (but less than 8)
 
-V2 releases are for PHP 8
+V2 releases are for PHP 7.4 as well as 8.0 and higher
 
 ```bash
 composer require covergenius/xcover-php

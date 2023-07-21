@@ -1,10 +1,10 @@
-name: CI
+name: Static Analysis
 
 on: [push, pull_request]
 
 jobs:
-  tests:
-    name: Tests
+  static-analysis:
+    name: Static Analysis
 
     runs-on: ubuntu-latest
 
@@ -24,11 +24,9 @@ jobs:
         uses: shivammathur/setup-php@master
         with:
           php-version: ${{ matrix.php-version }}
-          extensions: json, xdebug, soap
-          coverage: xdebug
 
       - name: install deps
         run: composer install --prefer-dist --no-progress --no-suggest
 
-      - name: run tests
-        run: cp -f .env.pipelines .env && composer test
+      - name: phpstan
+        run: composer analyse-ci

@@ -18,6 +18,9 @@ class Response extends BaseResponse
      */
     protected $json;
 
+    /**
+     * @return array|mixed|null
+     */
     public function json()
     {
         if ($this->json) {
@@ -32,7 +35,10 @@ class Response extends BaseResponse
         return null;
     }
 
-    public function isJsonResponse()
+    /**
+     * @return bool
+     */
+    public function isJsonResponse(): bool
     {
         return false !== strpos($this->getHeaderLine('Content-Type'), 'application/json');
     }
