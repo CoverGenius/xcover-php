@@ -1,0 +1,4 @@
+Contact: mailto:security@covergenius.com
+Preferred-Languages: en
+Policy: https://covergenius.com/privacy-policy/
+Hiring: https://covergenius.com/careers/

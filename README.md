@@ -1,3 +1,22 @@
+<p align="center">
+    <img src="xcover-logo.svg" />
+</p>
+
+<p align="center">
+    <img src="https://github.com/CoverGenius/xcover-php/workflows/CI/badge.svg" />
+    <img src="https://github.com/CoverGenius/xcover-php/workflows/Lint/badge.svg" />
+    <img src="https://github.com/CoverGenius/xcover-php/workflows/Composer/badge.svg" />
+    <img src="https://github.com/CoverGenius/xcover-php/workflows/Semgrep/badge.svg" />
+    <img src="https://github.com/CoverGenius/xcover-php/workflows/Static%20Analysis/badge.svg" />
+</p>
+
+<p align="center">
+    <a href="https://packagist.org/packages/CoverGenius/xcover-php"><img alt="Latest Stable Version" src="http://poser.pugx.org/CoverGenius/xcover-php/v?style=plastic" /></a>
+    <a href="https://packagist.org/packages/CoverGenius/xcover-php"><img alt="PHP Version Require" src="http://poser.pugx.org/CoverGenius/xcover-php/require/php?style=plastic" /></a>
+    <a href="https://packagist.org/packages/CoverGenius/xcover-php"><img alt="License" src="http://poser.pugx.org/CoverGenius/xcover-php/license?style=plastic" /></a>
+</p>
+
+
 # XCover SDK for PHP
 
 XCover SDK simplifies [XCover API](https://www.covergenius.com/api/docs/xcover/) integration in PHP applications.     
@@ -163,3 +182,55 @@ There are a few features which we will add in the future releases:
   * Async calls using Guzzle's promises
   * CircuitBreaker middleware
   * BYO HTTP Client
+
+
+## Testing
+
+PHPUnit with PHP-VCR are used to run tests.
+
+Tests are run on every push and pull request to the repository.
+
+Run the below command to run tests
+
+```bash
+composer test
+```
+
+## Code Style
+
+[PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) is used for coding standard. We currently follow PSR-1 and PSR-2 as a standard.
+
+Lint checks are run on every push and pull request.
+
+Run the below command to check for any code style issues.
+
+```bash
+composer lint
+```
+
+You can view the php-cs rules at [phpcs.xml](phpcs.xml)
+
+## Static Analysis
+
+[PHPStan](https://github.com/phpstan/phpstan) is used for static analysis of code. PHPStan is a PHP Static Analysis Tool. PHPStan focuses on finding errors in your code without actually running it.
+It catches whole classes of bugs even before you write tests for the code.
+
+Static Analysis is run on every push and pull request
+
+run the command below to check the code with PHPStan
+
+```bash
+composer analyse
+```
+
+## Changelog
+
+You can view the changelog at [CHANGELOG.md](CHANGELOG.md)
+
+## Security
+
+You can iew the security policy at [SECURITY.md](SECURITY.md)
+
+## Licence
+
+You can view license information at [LICENSE](LICENSE)
