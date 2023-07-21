@@ -11,10 +11,24 @@ use Psr\Http\Message\RequestInterface;
  */
 class AuthMiddleware
 {
+    /**
+     * @var string
+     */
     const SIGNATURE_ALGORITHM = 'sha512';
 
+    /**
+     * @var string
+     */
     private $apiKey;
+
+    /**
+     * @var string
+     */
     private $apiSecret;
+
+    /**
+     * @var array
+     */
     protected $configs = [];
 
     /**
@@ -85,11 +99,11 @@ class AuthMiddleware
     /**
      * Make the signature string
      *
-     * @param $signatureContentString
+     * @param string $signatureContentString
      *
      * @return string
      */
-    private function makeSignatureString($signatureContentString)
+    private function makeSignatureString(string $signatureContentString)
     {
         return base64_encode(
             hash_hmac(

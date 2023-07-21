@@ -14,12 +14,12 @@ abstract class BaseTestCase extends TestCase
     /**
      * Get the json payload from a .json file and return as php array
      *
-     * @param $file
+     * @param string $file
      * @param array $context
      *
      * @return mixed
      */
-    public function getPayloadFromFile($file, $context = [])
+    public function getPayloadFromFile(string $file, $context = [])
     {
         $payload = file_get_contents(dirname(__FILE__) . '/__fixtures__/' . $file);
 

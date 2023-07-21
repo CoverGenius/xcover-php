@@ -12,6 +12,8 @@ class XCoverTest extends BaseTestCase
 {
     /**
      * @test
+     *
+     * @return void
      */
     public function can_make_a_get_request()
     {
@@ -23,6 +25,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function can_make_a_post_request()
     {
@@ -35,6 +39,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function create_booking_success()
     {
@@ -80,6 +86,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function get_booking_success()
     {
@@ -107,6 +115,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function get_booking_with_query_params_success()
     {
@@ -139,6 +149,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function create_quote_422()
     {
@@ -156,6 +168,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function create_quote_success()
     {
@@ -167,6 +181,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function get_quote_success()
     {
@@ -181,6 +197,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function opt_out_422()
     {
@@ -201,6 +219,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function opt_out_success()
     {
@@ -222,6 +242,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function update_quote_success()
     {
@@ -237,6 +259,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function update_quote_422()
     {
@@ -253,6 +277,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function add_quotes_422()
     {
@@ -269,6 +295,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function add_quote_success()
     {
@@ -289,6 +317,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function delete_quotes_422()
     {
@@ -313,6 +343,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function delete_quotes_success()
     {
@@ -342,6 +374,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function list_bookings()
     {
@@ -354,6 +388,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function update_booking_422()
     {
@@ -370,6 +406,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function update_booking_success()
     {
@@ -388,6 +426,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function cancel_booking_422()
     {
@@ -404,6 +444,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function cancel_booking_success()
     {
@@ -423,6 +465,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function confirm_booking_success()
     {
@@ -442,6 +486,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function update_with_confirmation_success()
     {
@@ -465,6 +511,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function cancellation_with_confirmation_success()
     {
@@ -485,6 +533,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function instant_booking_success()
     {
@@ -500,6 +550,8 @@ class XCoverTest extends BaseTestCase
 
     /**
      * @test
+     *
+     * @return void
      */
     public function renewal_confirmation_success()
     {
@@ -512,6 +564,10 @@ class XCoverTest extends BaseTestCase
         $this->assertEquals(202, $response->getStatusCode());
     }
 
+    /**
+     * @return mixed
+     * @throws \XCoverClient\Exceptions\XCoverException
+     */
     protected function createQuote()
     {
         $client = $this->getClient();
@@ -528,6 +584,10 @@ class XCoverTest extends BaseTestCase
         return $response->json();
     }
 
+    /**
+     * @return mixed
+     * @throws \XCoverClient\Exceptions\XCoverException
+     */
     protected function createBooking()
     {
         $quote = $this->createQuote();
@@ -539,6 +599,9 @@ class XCoverTest extends BaseTestCase
         return $client->createBooking($quote['id'], $bookingParams)->json();
     }
 
+    /**
+     * @return string
+     */
     protected function getNow()
     {
         $date = new \DateTime();
@@ -547,6 +610,10 @@ class XCoverTest extends BaseTestCase
         return $date->format(\DateTime::RFC3339_EXTENDED);
     }
 
+    /**
+     * @return XCover
+     * @throws \XCoverClient\Exceptions\XCoverException
+     */
     protected function getClient()
     {
         return new XCover(new Config([

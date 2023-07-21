@@ -40,10 +40,10 @@ class XCover
      * @param string $method HTTP method.
      * @param string $url Relative URL to the partner's base URL (e.g. /quotes/).
      * @param int $expectedStatusCode Will cause a ResponseException if different response code is returned.
-     * @param array $payload Request body if required.
+     * @param array|null $payload Request body if required.
      * @param array $queryParams Optional query parameters.
      *
-     * @return ResponseInterface
+     * @return Response
      *
      * @throws XCoverException
      */
@@ -55,6 +55,7 @@ class XCover
         ];
 
         try {
+            /** @var Response $response */
             $response = $this->client->request($method, $this->makeUrl($url), $options);
         } catch (GuzzleException $e) {
             // Rethrow all Guzzle exceptions as XCoverException
@@ -77,7 +78,7 @@ class XCover
      * @param array $payload Quote request payload.
      * @param array $queryParams Optional query parameters.
      *
-     * @return ResponseInterface
+     * @return Response
      *
      * @throws XCoverException
      */
@@ -96,7 +97,7 @@ class XCover
      * @param string $quotePackageId ID of the quote package created using createQuote method.
      * @param array $queryParams Optional query parameters.
      *
-     * @return ResponseInterface
+     * @return Response
      *
      * @throws XCoverException
      */
@@ -117,7 +118,7 @@ class XCover
      * @param array $payload Request payload.
      * @param array $queryParams Optional query parameters.
      *
-     * @return ResponseInterface
+     * @return Response
      *
      * @throws XCoverException
      */
@@ -137,7 +138,7 @@ class XCover
      * @param array $payload Request payload.
      * @param array $queryParams Optional query parameters.
      *
-     * @return ResponseInterface
+     * @return Response
      *
      * @throws XCoverException
      */
@@ -157,7 +158,7 @@ class XCover
      * @param array $payload Request payload.
      * @param array $queryParams Optional query parameters.
      *
-     * @return ResponseInterface
+     * @return Response
      *
      * @throws XCoverException
      */
@@ -178,7 +179,7 @@ class XCover
      * @param array $payload Request payload.
      * @param array $queryParams Optional query parameters.
      *
-     * @return ResponseInterface
+     * @return Response
      *
      * @throws XCoverException
      */
@@ -198,7 +199,7 @@ class XCover
      * @param array $payload Request payload.
      * @param array $queryParams Optional query parameters.
      *
-     * @return ResponseInterface
+     * @return Response
      *
      * @throws XCoverException
      */
@@ -215,7 +216,7 @@ class XCover
      * @param array $payload Request payload.
      * @param array $queryParams Optional query parameters.
      *
-     * @return ResponseInterface
+     * @return Response
      *
      * @throws XCoverException
      */
@@ -234,7 +235,7 @@ class XCover
      * @param string $quotePackageId ID of the quote package.
      * @param array $queryParams Optional query parameters.
      *
-     * @return ResponseInterface
+     * @return Response
      *
      * @throws XCoverException
      */
@@ -250,7 +251,7 @@ class XCover
      *
      * @param array $queryParams Optional query parameters.
      *
-     * @return ResponseInterface
+     * @return Response
      *
      * @throws XCoverException
      */
@@ -268,7 +269,7 @@ class XCover
      * @param array $payload Request payload.
      * @param array $queryParams Optional query parameters.
      *
-     * @return ResponseInterface
+     * @return Response
      *
      * @throws XCoverException
      */
@@ -286,7 +287,7 @@ class XCover
      * @param array $payload Request payload.
      * @param array $queryParams Optional query parameters.
      *
-     * @return ResponseInterface
+     * @return Response
      *
      * @throws XCoverException
      */
@@ -304,7 +305,7 @@ class XCover
      * @param array $payload Request payload.
      * @param array $queryParams Optional query parameters.
      *
-     * @return ResponseInterface
+     * @return Response
      *
      * @throws XCoverException
      */
@@ -322,7 +323,7 @@ class XCover
      * @param array $payload Request payload.
      * @param array $queryParams Optional query parameters.
      *
-     * @return ResponseInterface
+     * @return Response
      *
      * @throws XCoverException
      */
@@ -341,7 +342,7 @@ class XCover
      * @param array $payload Request payload.
      * @param array $queryParams Optional query parameters.
      *
-     * @return ResponseInterface
+     * @return Response
      *
      * @throws XCoverException
      */
@@ -360,7 +361,7 @@ class XCover
      * @param array $payload Request payload.
      * @param array $queryParams Optional query parameters.
      *
-     * @return ResponseInterface
+     * @return Response
      *
      * @throws XCoverException
      */
@@ -378,7 +379,7 @@ class XCover
      * @param array $payload Request payload.
      * @param array $queryParams Optional query parameters.
      *
-     * @return ResponseInterface
+     * @return Response
      *
      * @throws XCoverException
      */
