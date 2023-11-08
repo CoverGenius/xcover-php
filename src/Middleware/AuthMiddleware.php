@@ -109,7 +109,7 @@ class AuthMiddleware
             hash_hmac(
                 static::SIGNATURE_ALGORITHM,
                 $signatureContentString,
-                utf8_encode($this->apiSecret),
+                mb_convert_encoding($this->apiSecret, 'UTF-8', mb_detect_encoding($this->apiSecret)),
                 true
             )
         );
