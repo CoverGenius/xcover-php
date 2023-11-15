@@ -2,6 +2,13 @@
 
 All notable changes to `xcover-php` will be documented in this file. Follow https://keepachangelog.com/en/1.0.0/ for more details.
 
+## v2.1.0 - 2023-11-15
+
+### Changed
+
+- switched utf8_encode to use mbstring instead, requiring mbstring ext for php
+- switched guzzle json encode to stop using deprecated functionality and use the recommended method for moving forward
+
 ## v2.0.1 - 2023-07-21
 
 ### Added
