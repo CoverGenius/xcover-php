@@ -26,14 +26,15 @@
   "require": {
     "php": "^7.4.0||^8.0",
     "guzzlehttp/guzzle": "^7.2",
-    "ext-json": "*"
+    "ext-json": "*",
+    "ext-mbstring": "*"
   },
   "require-dev": {
     "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
     "php-vcr/php-vcr": "^1.5.2",
     "phpstan/phpstan": "^1.10",
+    "phpstan/phpstan-deprecation-rules": "^1.1",
     "phpunit/phpunit": "^9.0",
-    "symfony/var-dumper": "^4.2",
     "vlucas/phpdotenv": "^2.5"
   },
   "autoload": {

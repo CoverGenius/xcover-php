@@ -5,8 +5,8 @@ namespace XCoverClient;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
+use GuzzleHttp\Utils;
 use GuzzleHttp\HandlerStack;
-use Psr\Http\Message\ResponseInterface;
 use XCoverClient\Exceptions\ResponseException;
 use XCoverClient\Exceptions\XCoverException;
 use XCoverClient\Middleware\AuthMiddleware;
@@ -50,7 +50,7 @@ class XCover
     public function call($method, $url, $expectedStatusCode = null, $payload = [], $queryParams = [])
     {
         $options = [
-            'body' => $payload ? \GuzzleHttp\json_encode($payload) : "{}",
+            'body' => $payload ? Utils::jsonEncode($payload) : "{}",
             'query' => $queryParams,
         ];
 
